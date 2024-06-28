@@ -38,3 +38,110 @@ nav{
     color: aqua;
     text-decoration: none;
 }
+
+
+.container{
+    width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.products{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    position: relative;
+
+}
+
+.product{
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 1px .5px 2px .5px;
+    padding-bottom: 10px;
+}
+
+.product img{
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.product p{
+    text-transform: capitalize;
+    margin-left: 10px;
+}
+
+.product h5, .product span{
+    margin-left: 10px;
+}
+
+.product-detail{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#popup{
+    background-color: #edebeb;
+    box-shadow: 1px 1px 2px 1px #a09e9e;
+    border-radius: 5px;
+    padding: 15px;
+    max-width: 500px;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 100px auto;
+}
+
+.product-detail img{
+    width: 50%;
+    border-radius: 5px;
+}
+
+.details{
+    width: 50%;
+}
+
+.inactive{
+    visibility: hidden;
+}
+
+
+#btn{
+    background-color: yellowgreen;
+    border-radius: 5px;
+    border: 2 ;
+    border-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

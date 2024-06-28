@@ -1,4 +1,4 @@
-var product = [
+const products = [
     {
       id: 1,
       title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
@@ -240,3 +240,125 @@ var product = [
       }
     }
   ]
+
+
+  let productsContainer = document.getElementById("products");
+
+  let productsEleList = [];
+
+  function creatProduct (product){
+    //Creat a product div
+let productElement = document.createElement("div");
+
+productElement.classList.add("product");
+
+productElement.setAttribute("id", product.id);
+
+    //creat product children element
+    let productImgEle = document.createElement("img");
+    productImgEle.setAttribute("src", product.image);
+
+    //h5
+    let productTitleEle = document.createElement("h6");
+    productTitleEle.innerText = product.title;
+
+    //span
+    let productSpanEle = document.createElement("span");
+    productSpanEle.innerText = "Price " + product.price;
+
+    //Apend all children elements to product div
+    productElement.append(productImgEle, productTitleEle,productSpanEle);
+
+    return productElement;
+  }
+
+  for (var x = 0; x<products.length; x++){
+    productsEleList.push(creatProduct(products[x]));
+
+  }
+
+  //append the created products html elements to the DOM
+productsContainer.append(...productsEleList)
+
+
+//Display product details functionality when clicked
+let productPopUp = document.getElementById("popup");
+
+let preventClick = document.getElementById("prevent");
+
+//select all product element
+let productEle = document.querySelectorAll(".product");
+
+//Add eventListener to all products
+for (let x = 0; x<productEle.length; x++){
+  productEle[x].addEventListener("click", /*(e)=>*/ function(e){
+    populatePopup(e.currentTarget.id)
+  })
+}
+
+//get details of the clicked product
+function populatePopup(id){
+
+  let targetProduct = products.find((product) =>product.id=== parseInt(id));
+
+  let productPopupDetail = `
+                        <img src=${targetProduct.image} alt="">
+                        <div class="details">
+                              <button id="btn">close</button>
+                              <h4>${targetProduct.title}</h4>
+                              <h6>${targetProduct.category}</h6>
+                              <p>${targetProduct.description}</p>
+                              <span>Price: ${targetProduct.price}</span>
+                        </div>`
+                  
+//Show the clicked product
+productPopUp.innerHTML = productPopupDetail;
+preventClick.classList.remove("inactive");
+
+//Close the popup
+let closeBtn = document.getElementById("btn");
+
+closeBtn.addEventListener("click", function(){
+  preventClick.classList.add("inactive")
+})
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
