@@ -264,7 +264,8 @@ productElement.setAttribute("id", product.id);
 
     //span
     let productSpanEle = document.createElement("span");
-    productSpanEle.innerText = "Price " + product.price;
+    productSpanEle.innerText = "Price: $" + product.price;
+
 
     //Apend all children elements to product div
     productElement.append(productImgEle, productTitleEle,productSpanEle);
@@ -308,7 +309,8 @@ function populatePopup(id){
                               <h4>${targetProduct.title}</h4>
                               <h6>${targetProduct.category}</h6>
                               <p>${targetProduct.description}</p>
-                              <span>Price: ${targetProduct.price}</span>
+                              <span>Price: $${targetProduct.price}</span>
+                              <button class ="btn">Add to Cart</button>
                         </div>`
                   
 //Show the clicked product
@@ -321,9 +323,10 @@ let closeBtn = document.getElementById("btn");
 closeBtn.addEventListener("click", function(){
   preventClick.classList.add("inactive")
 })
-
 }
 
+
+  
 
 
 
