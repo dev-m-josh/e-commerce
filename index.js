@@ -259,8 +259,12 @@ productElement.setAttribute("id", product.id);
     productImgEle.setAttribute("src", product.image);
 
     //h5
-    let productTitleEle = document.createElement("h6");
+    let productTitleEle = document.createElement("h4");
     productTitleEle.innerText = product.title;
+    /*
+    //Description
+    let productDescriptEle = document.createElement("p");
+    productDescriptEle.innerHTML = product.description;*/
 
     //span
     let productSpanEle = document.createElement("span");
@@ -268,7 +272,7 @@ productElement.setAttribute("id", product.id);
 
 
     //Apend all children elements to product div
-    productElement.append(productImgEle, productTitleEle,productSpanEle);
+    productElement.append(productImgEle, productTitleEle,/*productDescriptEle,*/productSpanEle);
 
     return productElement;
   }
@@ -310,7 +314,7 @@ function populatePopup(id){
                               <h6>${targetProduct.category}</h6>
                               <p>${targetProduct.description}</p>
                               <span>Price: $${targetProduct.price}</span>
-                              <button class ="btn">Add to Cart</button>
+                              <button onclick="add()" class ="btn">Add to Cart</button>
                         </div>`
                   
 //Show the clicked product
@@ -326,11 +330,13 @@ closeBtn.addEventListener("click", function(){
 }
 
 
-  
+  function add(){
+    alert("Product added successfully!");
+  }
 
 
 
-
+console.log(products[1].price);
 
 
 
