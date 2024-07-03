@@ -282,6 +282,7 @@ productElement.setAttribute("id", product.id);
 
   }
 
+
   //append the created products html elements to the DOM
 productsContainer.append(...productsEleList)
 
@@ -329,31 +330,25 @@ closeBtn.addEventListener("click", function(){
 })
 }
 
-
+/***The category list */
   function add(){
     alert("Product added successfully!");
   }
 
+const extractedCategories = products.map(function(categories){
+  return categories.category;
+})
+
+console.log(extractedCategories)
 
 
-console.log(products[1].price);
+/*price list*/
 
+const extractedPrices = products.map(function(prices){
+  return prices.price;
+})
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(extractedPrices)
 
 
 

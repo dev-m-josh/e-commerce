@@ -21,18 +21,63 @@
       </div>
     </nav>
     <div class="container">
-      <div class="filter">
-        <button>Category</button>
-        <button>Price</button>
-        <button>Rating</button>
-        <button>Offer</button>
+      <div class="offer">
+        <h1>
+          Grab Upto 50% Off<br />
+          On Selected Item
+        </h1>
+        <button>Buy Now</button>
       </div>
-      <h1>Products For You.</h1>
+      <div class="advert">
+        <img
+          src="https://img.freepik.com/free-photo/portrait-smiling-young-woman-presenting-something-against-orange-backdrop_23-2148119775.jpg"
+          alt=""
+        />
+      </div>
+      <div class="inputs">
+        <div class="filter">
+          <div class="category">
+            <select>
+              <option value="" selected>Category</option>
+              <option value="jewelery">jewelery</option>
+              <option value="Men's Clothing">Men's Clothing</option>
+              <option value="Electronics">Electronics</option>
+              <option value="Women's Clothing">Women's Clothing</option>
+            </select>
+          </div>
+          <div class="price">
+            <select>
+              <option value="" selected>Price</option>
+              <option value="$5 - $50">$5 - $50</option>
+              <option value="$51 - $150">$51 - $150</option>
+              <option value="$151 - $250">$151 - $250</option>
+              <option value="$251 - $500">$251 - $500</option>
+              <option value="$501 - ">$501 -</option>
+            </select>
+          </div>
+
+          <div class="rating">
+            <select>
+              <option value="" selected>Rating</option>
+              <option value="2.0 - 2.5">2.0 - 2.5</option>
+              <option value="2.6 - 3.5">2.6 - 3.5</option>
+              <option value="3.6 - 4.5">3.6 - 4.5</option>
+              <option value="4.6 - 5.0">4.6 - 5.0</option>
+            </select>
+          </div>
+        </div>
+        <div class="input">
+          <input type="text" placeholder="Search product..." name="search" />
+        </div>
+      </div>
+
+      <h1 style="align-self: flex-start; margin-left: 130px">
+        Products For You.
+      </h1>
+
       <div class="products" id="products"></div>
       <div class="product-detail inactive" id="prevent">
-        <div id="popup">
-         
-        </div>
+        <div id="popup"></div>
       </div>
     </div>
 
